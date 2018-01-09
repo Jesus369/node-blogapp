@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/public/styles.css">
+</head>
+<body>
+
+	<div class="navbar_div">
+		<table class="navbar_table">
+			<tr>
+				<td><h2>Blogging Site</h2></td>
+				<td class="navbar_td"><a href="/">Home</a></td>
+				<td class="navbar_td"><a href="/blogs/new">Post</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="postings">
+				<li>{{blog.title}}</li>
+				<li>{{blog.author}}</li>
+				<li><img class="image" src="{{blog.image}}"/></li>
+				<li>{{blog.body}}</li>
+				<li>{{blog.created}}</li>
+	</div>
+
+
+</body>
+</html>

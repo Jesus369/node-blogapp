@@ -1,0 +1,100 @@
+a {
+	color: black;
+	text-decoration: none;
+	outline: none;
+}
+
+.navbar_div {
+	background-color: #62CD51;
+	margin-bottom: 3em;
+	min-height: 5em;
+}
+
+.navbar_table {
+	position: absolute;
+	top: 1.5em;
+	left: 5em;
+}
+
+.navbar_td {
+	background-color: #B7EAAE;
+	border-right: 1.5px solid black;
+	border-left: 1.5px solid black;
+	border-radius: 5px;
+	color: white;
+	display: inline-block;
+	font-size: 1em;
+	margin-left: .3em;
+	padding: .2em 2em .6em 2em;
+}
+
+.blogsTable {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 0 auto 0 auto;
+}
+
+.blogsDiv {
+	border: 1px solid black;
+	margin: 0 auto 0 auto;
+}
+.blogRow {
+	border: 1px solid black;
+}
+
+.info {
+	list-style-type: none;
+}
+.image {
+	width: 300px;
+	height: 350px;
+}
+
+.read_more {
+	color: blue;
+}
+
+/* WITHIN /BLOG/NEW */
+.postings {
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-left: 3em;
+	width: 45%;
+}
+
+.inputarea {
+	display: flex;
+	flex-direction: column;
+	margin: 1em 0 1em 0;
+	height: 10em;
+	width: 50%;
+}
+.inputfield {
+	display: flex;
+	flex-direction: column;
+	margin: 1em 0 1.5em 0;
+	height: 2em;
+}
+
+.form_label {
+	margin-left: 1em;
+}
+
+.textarea {
+	box-shadow: 0 0 1px 3px #E0DFDF;
+	font-size: .8em;
+	margin: 5px 0 5px 2.5em;
+	height: 13em;
+}
+.textfield {
+	box-shadow: 0 0 1.4px 2px #E0DFDF;
+	font-size: .8em;
+	margin: 5px 0 5px 2.5em;
+	width: 13em;
+}
+
+.form_button {
+	width: 8em;
+	margin-left: 1em;
+	margin-top: 1em;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/public/styles.css">
+</head>
+<body>
+	<div class="navbar_div">
+		<table class="navbar_table">
+			<tr>
+				<td><h1>Blogging Site</h1></td>
+				<td class="navbar_td"><a href="/">Home</a></td>
+				<td class="navbar_td"><a href="/blogs/new">Post</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="postings">
+		<form action="/blogs" method="POST" class="blog_form">
+			<div class="inputfield">
+				<label class="form_label">Title:</label>
+				<input type="text" name="title" placeholder="title" class="textfield">
+			</div>
+			<div class="inputfield">
+				<label class="form_label">Image:</label>
+				<input type="text" name="image" placeholder="image" class="textfield">
+			</div>
+			<div class="inputarea">
+				<label class="form_label">Body:</label>
+				<textarea name="body" placeholder="Enter your story" class="textarea"></textarea>
+			</div>
+			<div class="inputfield">
+				<label class="form_label">Author:</label>
+				<input type="text" name="author" placeholder="author" class="textfield">
+			</div>
+			<div class="inputfield">
+				<button class="form_button">Submit</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
