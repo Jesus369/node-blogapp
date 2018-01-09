@@ -8,15 +8,11 @@ const app = express()
 
 mongoose.connect("mongodb://localhost/restful_blog_app", {useMongoClient: true});
 app.use(bodyParser.urlencoded({ extended: true }));
-app.engine('mustache',mustacheExpress())
 app.use('/public', express.static('public'))
+app.engine('mustache',mustacheExpress())
 app.use(methodOverride("_method"))
-app.set('views','./views')
-app.set('new', '/new')
-app.set('show', '/show')
-app.set('edit', '/edit')
 app.set('view engine','mustache')
-
+app.set('views','./views')
 
 // MONGOOSE/MODEL CONFIG
 var blogSchema = new mongoose.Schema({
@@ -91,13 +87,13 @@ app.get('/blogs/:id/edit', (req,res) => {
 
 // UPDATE ROUTE
 app.put('/blogs/:id?', (req,res) => {
-	Blog.findByIdAndUpdate(req.params.id,
-	{$set: {
-	title : req.body.title,
-	author : req.body.author,
-	image : req.body.image,
-	body : req.body.body		
-} }, (err,updatedBlog) => {
+		Blog.findByIdAndUpdate(req.params.id,
+		{$set: {
+		title : req.body.title,
+		author : req.body.author,
+		image : req.body.image,
+		body : req.body.body		
+		} }, (err,updatedBlog) => {
 		if(err) {
 			res.send("")
 		} else {
@@ -107,8 +103,16 @@ app.put('/blogs/:id?', (req,res) => {
 })
 
 // DELETE ROUTE
-
-
+app.delete('/blogs/:id', (req,res) => {
+	// DELETE BLOG
+	Blog.findByIdAndRemove(req.params.id, (err) => {
+		if(err) {
+			res.send("There was an error deleting!")
+		} else {
+			res.redirect('/blogs')
+		}
+	})
+})
 
 app.listen(3000, () => {
 	console.log('We are live on port 3000!')
