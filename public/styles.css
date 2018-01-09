@@ -58,6 +58,7 @@ a {
 .postings {
 	border: 1px solid black;
 	border-radius: 5px;
+	list-style: none;
 	margin-left: 3em;
 	width: 45%;
 }
@@ -90,7 +91,8 @@ a {
 	box-shadow: 0 0 1.4px 2px #E0DFDF;
 	font-size: .8em;
 	margin: 5px 0 5px 2.5em;
-	width: 13em;
+	max-width: 13em;
+	min-width: 13em;
 }
 
 .form_button {
