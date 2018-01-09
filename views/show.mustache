@@ -17,11 +17,17 @@
 	</div>
 
 	<div class="postings">
-				<li>{{blog.title}}</li>
-				<li>{{blog.author}}</li>
-				<li><img class="image" src="{{blog.image}}"/></li>
-				<li>{{blog.body}}</li>
-				<li>{{blog.created}}</li>
+		<li>{{blog.title}}</li>
+		<li>{{blog.author}}</li>
+		<li><img class="image" src="{{blog.image}}"/></li>
+		<li>{{blog.body}}</li>
+		<li>{{blog.created}}</li>
+
+		<button class="form_button"><a href="/blogs/{{blog._id}}/edit"=>EDIT</a></button>
+		<form action="/blogs/{{blog._id}}?_method=DELETE" method="POST">
+			<button class="form_button">DELETE</button>
+		</form>
+
 	</div>
 
 
